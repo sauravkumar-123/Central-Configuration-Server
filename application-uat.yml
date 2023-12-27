@@ -6,3 +6,22 @@ eureka:
     register-with-eureka: true
     service-url:
       default-zone: http://localhost:8761/eureka/
+
+management:
+    security:
+        enabled: false
+    health:
+        consul:
+            enabled: false
+    endpoints:
+        endpoints:
+        web:
+          exposure:
+            include: "*"
+          base-path: /v1/appInfo  
+    endpoint:
+      health:
+        show-details: ALWAYS 
+      
+
+      
